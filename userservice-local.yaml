@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: userservice
+jwt:
+  secret: uY9FJ3V0sKQe7mR2xB8A6ZpNwH1L4C5TtE0dSgOaXyI=
+  expiration: 900000
+server:
+  port: 2001
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:4002/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      access: unrestricted
+    health:
+      probes:
+        enabled: true
+  info:
+    env:
+      enabled: true
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
+
+info:
+  app:
+    name: "userservice"
