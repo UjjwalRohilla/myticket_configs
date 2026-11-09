@@ -1,6 +1,17 @@
 spring:
   application:
     name: userservice
+  datasource:
+    url: jdbc:postgresql://localhost:5432/myticket_user_db
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
 jwt:
   secret: uY9FJ3V0sKQe7mR2xB8A6ZpNwH1L4C5TtE0dSgOaXyI=
   expiration: 900000
