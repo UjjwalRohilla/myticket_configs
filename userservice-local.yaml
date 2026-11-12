@@ -13,8 +13,10 @@ spring:
       hibernate:
         format_sql: true
 jwt:
-  secret: uY9FJ3V0sKQe7mR2xB8A6ZpNwH1L4C5TtE0dSgOaXyI=
-  expiration: 900000
+  private-key: classpath:certs/private.pem
+  public-key: classpath:certs/public.pem
+  expiration: 3600000
+  issuer: myticket-user-service
 server:
   port: 2001
 
