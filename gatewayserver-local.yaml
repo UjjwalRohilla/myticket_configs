@@ -9,7 +9,9 @@ spring:
             locator:
               enabled: true
               lowerCaseServiceId: true
-
+jwt:
+  public-key: classpath:certs/public.pem
+  issuer: myticket-user-service
 server:
   port: 4003
 
