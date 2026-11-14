@@ -14,7 +14,11 @@ jwt:
   issuer: myticket-user-service
 server:
   port: 4003
-
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.security.oauth2: TRACE
+    org.springframework.cloud.gateway: DEBUG
 eureka:
   instance:
     preferIpAddress: true
